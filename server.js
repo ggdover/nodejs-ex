@@ -1,4 +1,7 @@
-var port = 8080;
+//var port = 8080;
+
+var ipaddress = process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
+var port      = process.env.OPENSHIFT_NODEJS_PORT || 8080;
 
 // Require the modules we need
 var http = require('http');
@@ -11,7 +14,7 @@ var httpServer = http.createServer(function(request, response) {
 });
 
 // Setup the http-server to listen to a port
-httpServer.listen(port, function() {
+httpServer.listen(port, ipaddress, function() {
   console.log((new Date()) + ' HTTP server is listening on port ' + port);
 });
 
