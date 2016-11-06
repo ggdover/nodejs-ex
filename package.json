@@ -1,6 +1,9 @@
 {
   "name": "chat",
   "version": "1.0.0",
+  "dependencies": {
+    "websocket": "1.0.3"
+  },
   "description": "",
   "main": "jquery-3.1.0.min.js",
   "scripts": {
