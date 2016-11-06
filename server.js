@@ -1,4 +1,4 @@
-var port = 1337;
+var port = 8080;
 
 // Require the modules we need
 var http = require('http');
